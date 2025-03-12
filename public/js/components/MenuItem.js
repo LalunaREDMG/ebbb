@@ -40,7 +40,7 @@ export class MenuItem {
         <div class="menu-item-info">
           <div class="menu-item-header">
             <h3 class="menu-item-name">${this.item.name || "Untitled"}</h3>
-            <span class="menu-item-price">₱${this.item.price || ""}</span>
+            <span class="menu-item-price">$${Number(this.item.price || 0).toFixed(2)} AUD</span>
           </div>
           <p class="menu-item-description">${this.item.description || ""}</p>
           ${
@@ -81,7 +81,7 @@ export class MenuItem {
         <div class="modal-details">
           <div class="detail-item">
             <div class="detail-label">Price</div>
-            <div class="detail-value">₱${this.item.price}</div>
+            <div class="detail-value">$${Number(this.item.price || 0).toFixed(2)} AUD</div>
           </div>
           <div class="detail-item">
             <div class="detail-label">Category</div>

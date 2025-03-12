@@ -175,3 +175,21 @@ export class GoogleSheetsAPI {
     }
   }
 }
+
+// Add error handling for API keys
+if (!CONFIG.GOOGLE_API_KEY) {
+  console.error("Google API Key is missing");
+}
+
+// Add rate limiting
+const rateLimiter = {
+  lastCall: 0,
+  minInterval: 1000, // 1 second
+  checkLimit() {
+    const now = Date.now();
+    if (now - this.lastCall < this.minInterval) {
+      throw new Error("Rate limit exceeded");
+    }
+    this.lastCall = now;
+  },
+};

@@ -395,12 +395,13 @@ nav {
 }
 
 .menu-item-price {
-  font-size: 1.1rem;
-  font-weight: 700;
+  font-size: 1rem;
+  font-weight: 600;
   color: var(--accent-color);
   padding: 0.25rem 0.75rem;
-  border-radius: 20px;
   background: rgba(255, 77, 77, 0.1);
+  border-radius: 20px;
+  white-space: nowrap;
 }
 
 .menu-item-description {
@@ -1637,4 +1638,10 @@ html {
 .drink-option:hover {
   background: var(--accent-color);
   color: white;
+}
+
+.modal-details .detail-value {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--accent-color);
 }
